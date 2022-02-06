@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Final
+	</title>
+
+	<style>
+        button {
+			background-color: #E7E9EB;
+			color: black;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 20%;
+		}
+		#customers {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 70%;
+		}
+	   #customers td, #customers th {
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+		#customers tr:nth-child(even){background-color: #f2f2f2;}
+		#customers tr:hover {background-color: #ddd;}
+		#customers th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #04AA6D;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+    <centre>
+	<h1>FINAL SCORE!!</h1>
+	<!-- Create Form -->
+	<table id="customers">
+    <tr>
+    <th>User</th>
+    <th>OOPS RELEVANCE SCORE</th>
+    <th>DBMS RELEVANCE SCORE</th>
+	<th>OS RELEVANCE SCORE</th>
+    </tr>
+    {%for user in user_objects%}
+    <tr>
+    <td>{{user.mailid}}</td>
+    <td>{{user.oops_score}}</td>
+    <td>{{user.dbms_score}}</td>
+	<td>{{user.os_score}}</td>
+    </tr>
+    {%endfor%}
+	</table><br><br>
+	<form id="form" method="post" action="logout">
+		{% csrf_token %}
+	<button type="submit" value="submit">
+		Logout
+	</button>
+	</form>
+    </centre>	
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		DBMS Questions
+	</title>
+	<style>
+		body {
+			background-color:#4CAF50 ;
+			font-family: Verdana;
+			text-align: center;
+		}
+		form {
+		    border: 4px solid black;
+            padding: 10px;
+            border-radius: 25px;
+			background-color: #fff;
+			max-width: 1000px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			length:90px;
+			width: 95%;
+		}
+		
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		
+		button {
+			background-color: #4CAF50;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 18px;
+			display: block;
+			width: 20%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			color:white;
+		}
+		input[type=text], input[type=password],textarea{
+        width: 75%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border:solid black 3px;
+}
+	</style>
+</head>
+
+<body>
+	<h1 style="color:white">DBMS questions</h1>
+	<!-- Create Form -->
+	<form id="form" method="post" action="dbms_storeans">
+		{% csrf_token %}
+		<!-- Details -->
+       {%for ques in question_objects %}
+	   <centre>
+		<div class="form-control" style="padding-left:150px;">
+			<label for="name" id="label-name">
+               {{ques}}
+			</label>
+			<textarea
+				id="name" rows="6" cols="40"
+				name="{{ forloop.counter }}" placeholder="Enter your answer" required></textarea>
+		</div>
+		</centre>
+        {%endfor%}
+		<!-- Multi-line Text Input Control -->
+		<center>
+		<button type="submit" value="submit">
+		 SUBMIT
+		</button>
+		</center>
+	</form>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Instructions
+	</title>
+	<style>
+		body {
+   font-family: Verdana, sans-serif;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left {
+  left: 0;
+  background-color:green;
+  font-color:solid white;
+}
+.right {
+  right: 0;
+  background-color:white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+	</style>
+</head>
+
+<body>
+	
+		{% csrf_token %}
+		<!-- Details -->
+      
+		<div class="split left">
+  <div class="centered">
+  <center>
+  <img src="https://www.w3schools.com/howto/img_avatar.png">
+  <h1 style="color:white">Welcome to Interview Test</h1>
+  </center>
+    </div>
+</div>
+<div class="split right">
+  <div class="centered">
+    <h1><u>Instructions</u></h1>
+    <h3>
+	The Test Comprises of 3 sections<br>
+	<li>OOPS</li>
+	<li>DBMS</li>
+	<li>OPERATING SYSTEM</li><br>
+	On clicking the 'Take test button' you will be redirected to first section of the test.<br><br>
+	Each section comprises of 10 questions.<br><br>
+	After completion of the first section you will be redirected to the remaining sections of the test.<br><br>
+	Attempt all the three sections to complete your test process.<br><br>
+	</h3>
+    <br><br>
+ 	<form id="form" method="post" action="questions"><center><button type="submit">Take Test!</button></center></form>
+  </div>
+</div>
+
+		
+		<!-- Multi-line Text Input Control -->
+		
+</body>
+
+</html>

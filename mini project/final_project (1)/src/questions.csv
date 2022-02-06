@@ -1,0 +1,27 @@
+﻿id,description
+1,What do you mean by transparent DBMS
+2,What is RDBMS
+3,What do you understand by Data Model
+4, What is a degree of Relation
+5,What is DDL 
+6,What is DML
+7,What is data abstraction in DBMS
+8,Explain the functionality of DML Compiler
+9,What is Relational Algebra
+10,What is Relational Calculus
+11,What is normalization
+12,What is functional Dependency
+13,What is an entity
+14,What is an attribute
+15,What are the three levels of data abstraction
+16,What is Join
+17,What is a shared lock
+18,What is a exclusive lock
+19,What is 2-Tier architecture
+20,Mention the issues with traditional file-based systems that make DBMS a better choice
+21,What is meant by ACID properties in DBMS
+22,What is meant by Data Warehousing
+23,What is candidate key
+24,What is super key
+25,What is primary key
+26,What is foreign Key

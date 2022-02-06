@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Os score
+	</title>
+	<style>
+		body {
+			text-align: center;
+			padding: 40px 0;
+			font-family: Verdana, sans-serif;
+		}
+		button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        p {
+          color: #404F5E;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size:20px;
+          margin: 0;
+        }
+      i {
+        color: #9ABC66;
+        font-size: 100px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+		border:5px solid green;
+        box-shadow: 0 2px 3px #C8D0D8;
+		width:50%;
+		height:70%;
+        display: inline-block;
+        margin: 0 auto;
+      }
+	</style>
+</head>
+<body>
+      <div class="card">
+      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+        <i class="checkmark">✓</i>
+      </div>
+      <div>
+        <h1>OS Score</h1>
+       {%for a, b, c in nblist%}
+       <p>ANSWER-{{forloop.counter}}<br>RELEVANCE SCORE: {{a}}</p>
+    <p>CLASS:{{b}}</p><p>SEMANTIC SIMILARITY:{{c}}</p>
+     <br><br>
+       {%endfor%}
+     </div><br>
+    <form id="form" method="post" action="final">
+		{% csrf_token %}<!--{{ans}}-->
+		<button type="submit" value="submit">
+			Next
+		</button>
+	</form>
+</body>
+</html>
